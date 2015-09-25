@@ -6,11 +6,13 @@
   <tbody>
     <tr>
       <th style="width:60%;">店名</th>
+      <th style="width:20%;">評価点</th>
       <th colspan="3" style="width:20%;"></th>
     </tr>
-    <% @shops.each do |shop| %>
+<% @shops.each do |shop| %>
     <tr>
       <td><%= shop.name %></td>
+      <td></td>
       <td><%= link_to '詳細情報', shop, class: "btn btn-default btn-xs" %></td>
       <td><%= link_to '店舗情報編集', edit_shop_path(shop), class: "btn btn-default btn-xs" %></td>
       <td><%= link_to 'お店を削除する', shop, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-xs" %></td>

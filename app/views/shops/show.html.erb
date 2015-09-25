@@ -21,7 +21,7 @@
 <hr/>
 <table class="table table-striped">
   <tbody>
-<% @shop.reviews.each do |review| %>
+<% @review.each do |review| %>
     <tr>
       <td><%= image_tag review.user.img_url, width: "50px" %><br/><%= review.user.name %>さんのコメント</td>
       <td><% star = review.rate.to_i %>

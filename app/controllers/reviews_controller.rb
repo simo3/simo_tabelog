@@ -18,8 +18,15 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def destroy
+    @review = Review.find(params[:id])
+    shop_id = @review.shop_id
+    @review.destroy
+    redirect_to review_url(shop_id)
+  end
+
   private
   def review_params
-    params.require(:review).permit(:comment, :rate)
+    params.require(:review).permit(:comment, :rate, :shop_id, :user_id)
   end
 end

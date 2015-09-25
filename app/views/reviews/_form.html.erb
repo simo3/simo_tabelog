@@ -8,6 +8,7 @@
   <%= f.select :rate, {"★☆☆☆☆" => 1, "★★☆☆☆" => 2, "★★★☆☆" => 3, "★★★★☆" => 4, "★★★★★" => 5}, include_blank: true %>
 </div>
 <% f.hidden_field :shop_id %>
+<% f.hidden_field :user_id %>
 <div>
   <%= f.submit 'コメントを登録' %>
 </div>
