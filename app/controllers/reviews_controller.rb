@@ -8,7 +8,8 @@ class ReviewsController < ApplicationController
     @review = Review.new(
       shop_id: params[:shop_id],
       user_id: current_user.id,
-      comment: review_params["comment"]
+      comment: review_params["comment"],
+      rate: review_params["rate"]
       )
     if @review.save
       redirect_to shop_url(@review.shop)
@@ -19,6 +20,6 @@ class ReviewsController < ApplicationController
 
   private
   def review_params
-    params.require(:review).permit(:comment)
+    params.require(:review).permit(:comment, :rate)
   end
 end
