@@ -1,11 +1,11 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
+<nav class="navbar navbar-default clearfix">
+  <div class="container-fluid dl">
     <div class="navbar-header">
       <h1><%= link_to 'Simoの食べLOG', shops_path %></h1>
     </div>
   </div>
-  <div class="collapse navbar-collapse" id="navbar-collapse-menu">
-      <ul class="nav navbar-nav navbar-right">
+  <div class="collapse navbar-collapse dr" id="navbar-collapse-menu">
+      <ul class="nav navbar-nav">
         <% if user_signed_in? %>
           <li><%= link_to "設定変更", edit_user_registration_path, class: "btn btn-default btn-xs" %></li>
           <li><%= link_to "ログアウト", destroy_user_session_path, class: "btn btn-default btn-xs", method: :delete %></li>
@@ -14,5 +14,5 @@
           <li><%= link_to "ログイン", new_user_session_path, class: "btn btn-default btn-xs" %></li>
         <% end %>
       </ul>
-    </div>
+  </div>
 </nav>

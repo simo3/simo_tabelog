@@ -1,24 +1,19 @@
 <p id="notice"><%= notice %></p>
+<h3><%= @shop.name %></h3>
+<table class="table table-striped">
+  <tbody>
+    <tr>
+      <th>住所：</th><td><%= @shop.address %></td>
+    </tr>
+    <tr>
+      <th>Tel：</th><td><%= @shop.tel %></td>
+    </tr>
+    <tr>
+      <th>ホームページ：</th><td><%= @shop.url %></td>
+    </tr>
+  </tbody>
+</table>
+<div><%= link_to '編集する', edit_shop_path(@shop), class: "btn btn-default" %>　<%= link_to 'TOPに戻る', shops_path, class: "btn btn-default" %></div><br/>
+<hr/>
 
-<p>
-  <strong>店名：</strong>
-  <%= @shop.name %>
-</p>
 
-<p>
-  <strong>住所：</strong>
-  <%= @shop.address %>
-</p>
-
-<p>
-  <strong>電話番号：</strong>
-  <%= @shop.tel %>
-</p>
-
-<p>
-  <strong>ホームページ：</strong>
-  <a href="<%= @shop.url %>"><%= @shop.url %></a>
-</p>
-
-<%= link_to '編集する', edit_shop_path(@shop), class: "btn btn-default" %>
-<%= link_to 'TOPに戻る', shops_path, class: "btn btn-default" %>
