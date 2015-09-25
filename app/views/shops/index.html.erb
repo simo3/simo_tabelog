@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h2>Listing Shops</h2>
+<h2>店舗一覧</h2>
 
 <table class="table table-striped">
   <thead>
@@ -20,9 +20,9 @@
         <td><%= shop.address %></td>
         <td><%= shop.tel %></td>
         <td><%= shop.url %></td>
-        <td><%= link_to 'Show', shop %></td>
-        <td><%= link_to 'Edit', edit_shop_path(shop) %></td>
-        <td><%= link_to 'Destroy', shop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', shop, class: "btn btn-default btn-xs" %></td>
+        <td><%= link_to 'Edit', edit_shop_path(shop), class: "btn btn-default btn-xs" %></td>
+        <td><%= link_to 'Destroy', shop, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-xs" %></td>
       </tr>
     <% end %>
   </tbody>
