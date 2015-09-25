@@ -5,12 +5,13 @@ class ShopsController < ApplicationController
   # GET /shops
   # GET /shops.json
   def index
-    @shops = Shop.all
+    @shops = Shop.page(params[:page]).per(5)
   end
 
   # GET /shops/1
   # GET /shops/1.json
   def show
+    @review = Review.all
   end
 
   # GET /shops/new
