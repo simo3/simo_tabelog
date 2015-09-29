@@ -1,0 +1,6 @@
+<h3>最新記事</h3>
+<div class="list-group">
+  <% Review.latest.each do |shop| %>
+    <%= link_to shop.shop.name, shop_path(shop.shop_id), class: "list-group-item" %>
+  <% end %>
+</div>

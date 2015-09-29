@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20150925054032) do
     t.integer  "rate"
   end
 
-  add_index "reviews", ["shop_id", "user_id"], name: "index_reviews_on_shop_id_and_user_id", unique: true
+  add_index "reviews", ["shop_id", "user_id"], name: "index_reviews_on_shop_id_and_user_id"
   add_index "reviews", ["shop_id"], name: "index_reviews_on_shop_id"
   add_index "reviews", ["user_id"], name: "index_reviews_on_user_id"
 
