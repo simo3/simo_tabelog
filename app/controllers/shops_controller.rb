@@ -12,7 +12,7 @@ class ShopsController < ApplicationController
   # GET /shops/1
   # GET /shops/1.json
   def show
-    @review = Review.all
+    @review = Review.where(shop_id: params[:id])
   end
 
   # GET /shops/new
