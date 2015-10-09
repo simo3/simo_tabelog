@@ -26,5 +26,5 @@ production:
   database: tabelog
   port: 3306
   username: simo3
-  password: simo5967
+  password: S1m0s15967
   host: localhost
